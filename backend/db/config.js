@@ -1,3 +1,3 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/ep-comm')
+mongoose.connect('mongodb://localhost:27017/ep-comm') 
 

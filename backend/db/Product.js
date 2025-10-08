@@ -6,4 +6,4 @@ const productSchema = new mongoose.Schema({
     userId:String,
     company:String 
 })
-module.exports = mongoose.model('products',productSchema)
+module.exports = mongoose.model('products',productSchema) 
