@@ -5,7 +5,7 @@ function ProductTable() {
   const [products, setProducts] = useState([]);
   const [searchKey, setSearchKey] = useState("");
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -105,5 +105,7 @@ function ProductTable() {
     </div>
   );
 }
+
+
 
 export default ProductTable;

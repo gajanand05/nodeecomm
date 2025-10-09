@@ -14,9 +14,9 @@ const Nav = () => {
     return(
         <div>
             <div className="nav-parent">
-            <img src="/e-comm.jpg" alt="logo" className='logo-image'></img>
+            <Link Link to="/"><img src="/e-comm.jpg" alt="logo" className='logo-image'></img></Link>
            {auth ?  <ul className='nav-ul'> 
-                <li><Link to="/">Products</Link></li>
+                <li><Link to="/products">Products</Link></li>
                 <li><Link to="/add">Add Product</Link></li>
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link onClick={logout} to="/signup">Logout ({JSON.parse(auth).name})</Link></li> 
