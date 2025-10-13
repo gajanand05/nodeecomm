@@ -52,7 +52,7 @@ button.login-button {
 }
 .logo-image {
     float: left;
-    margin: 0 0 0 50px;
+   
 }
 .nav-parent {
     background: skyblue;
@@ -101,15 +101,28 @@ button.login-button {
   background: #0056b3;
 }
 .product-data {
-    width: 90%;
+    width: 100%;
     margin: 20px auto;
 }
 /*product table css */
 .product-table {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   text-align: left;
   font-family: Arial, sans-serif;
+}
+input.searchInput{
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 300px;
+    float: right;
+}
+.re-container {
+    width: 90%;
+    margin: auto;
+}
+.nav-header {
+    background: skyblue;
 }
 
 .product-table th,
@@ -142,19 +155,27 @@ button.login-button {
 }
 
 .editBtn {
-  background-color: #4CAF50;
-  color: white;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 28px;
+    border: navajowhite;
+    cursor: pointer;
 }
-
 .deleteBtn {
-  background-color: #f44336;
-  color: white;
+    background-color: #f44336;
+    color: white;
+    padding: 8px 28px;
+    border: navajowhite;
+    margin: 0 0 0 10px;
+    pointer-events: cursor;
+    cursor: pointer;
 }
 .product-grid {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 60px;
   margin-top: 20px;
+  display:inline-grid;
 }
 
 .product-card {
@@ -184,6 +205,19 @@ button.login-button {
 .product-price {
   color: green;
 }
+.product-header h2 {
+    width: 50%;
+    float: left;
+}
+.product-header .searchInput{
+    float: right;
+}
+.profile-contents {
+    display: inline-flex;
+    column-gap: 34px;
+    margin: 26px auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

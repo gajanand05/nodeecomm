@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProductListHome = () => {
   const [products, setProducts] = useState([]);
+  const [searchKey, setSearchKey] = useState("");
 
   useEffect(() => {
     fetchProducts();
@@ -18,9 +19,44 @@ const ProductListHome = () => {
     }
   };
 
+
+    // Handle search input change
+  const handleSearch = async (e) => {
+    const key = e.target.value;
+    setSearchKey(key);
+
+    if (key.trim() === "") {
+      fetchProducts(); // if empty, show all products
+      return;
+    }
+
+    try {
+      let response = await fetch(`http://localhost:8500/products/search/${key}`);
+      if (response.ok) {
+        let data = await response.json();
+        setProducts(data);
+      } else {
+        setProducts([]); // no results
+      }
+    } catch (error) {
+      console.error("Error searching products:", error);
+    }
+  };
+
   return (
+    <div className='re-container'>
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+        <div className="product-header">
       <h2>Products</h2>
+         <input
+        type="text"
+        placeholder="Search by name or category..."
+        value={searchKey}
+        onChange={handleSearch}
+        className="searchInput"
+        style={{ marginBottom: "10px", padding: "5px", width: "300px" }}
+      />
+      </div>
       <div className="product-grid">
         {products.map((item) => (
           <Link
@@ -36,6 +72,7 @@ const ProductListHome = () => {
           </Link>
         ))}
       </div>
+    </div>
     </div>
   );
 };

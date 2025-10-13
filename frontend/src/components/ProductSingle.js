@@ -26,6 +26,7 @@ const ProductSingle = () => {
   }
 
   return (
+    <div className='re-container'>
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <button
         onClick={() => navigate(-1)}
@@ -74,6 +75,7 @@ const ProductSingle = () => {
               including versions of Lorem Ipsum.</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

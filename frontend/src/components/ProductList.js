@@ -65,6 +65,7 @@ function ProductTable() {
 };
 
   return (
+     <div className='re-container'>
    <div className="product-data">
      <input
         type="text"
@@ -72,7 +73,6 @@ function ProductTable() {
         value={searchKey}
         onChange={handleSearch}
         className="searchInput"
-        style={{ marginBottom: "10px", padding: "5px", width: "300px" }}
       />
 
     <table className="product-table">
@@ -102,6 +102,7 @@ function ProductTable() {
         ))}
       </tbody>
     </table>
+    </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import ProductTable from './components/ProductList'
 import ProductUpdate from './components/ProductUpdate'
 import ProductList from './components/ProductListHome'
 import ProductSingle from './components/ProductSingle'
+import Profile from './components/Profile'
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
       <Route path="/add" element={<AddProduct/>} />
       <Route path="/products/:id" element={<ProductSingle/>} />
       <Route path="/products/edit/:id" element={<ProductUpdate/>} />
-      <Route path="/profile" element={<h1>Profile Cotnent</h1>} />
+      <Route path="/profile" element={<Profile/>} />
       <Route path="/logout" element={<h1>Logout Here </h1>} />
       
       </Route>

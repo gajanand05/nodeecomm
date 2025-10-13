@@ -12,7 +12,8 @@ const Nav = () => {
         navigate('/')
     } 
     return(
-        <div>
+        <div className='nav-header'>
+            <div className='re-container'>
             <div className="nav-parent">
             <Link Link to="/"><img src="/e-comm.jpg" alt="logo" className='logo-image'></img></Link>
            {auth ?  <ul className='nav-ul'> 
@@ -23,6 +24,7 @@ const Nav = () => {
             </ul> : 
            <ul className='nav-ul nav-right'><li><Link to="/signup">Sign Up</Link></li><li><Link to="/login">Login</Link></li></ul>
           } 
+          </div>
           </div>
         </div>
     )
